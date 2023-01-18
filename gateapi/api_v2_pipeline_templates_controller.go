@@ -455,7 +455,8 @@ func (a *V2PipelineTemplatesControllerApiService) ListUsingGET1(ctx context.Cont
 	localVarFormParams := url.Values{}
 
 	if localVarOptionals != nil && localVarOptionals.Scopes.IsSet() {
-		localVarQueryParams.Add("scopes", parameterToString(localVarOptionals.Scopes.Value(), "multi"))
+		myScopes := []string{}
+		localVarQueryParams.Add("scopes", parameterToString(myScopes, "multi"))
 	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}
